@@ -1,3 +1,4 @@
+<!--delete session-->
 {{session()->flush()}}
 Your're logout!, redirect to login page...
 <script>

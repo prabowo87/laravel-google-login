@@ -53,12 +53,14 @@ class UserController extends Controller
                 //store session google user value, your name
                 'googleuser'    => $userInfo['name']
             ]);
+            //redirect to index page
             return redirect()->route('index');
         }
         else
         {
             //For Guest user, get google login url
             $authUrl = $klien->createAuthUrl();
+            //redirect user to login with google page
             return redirect()->to($authUrl);
         }
     }
