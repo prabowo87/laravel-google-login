@@ -26,8 +26,7 @@ class Google_Service_Dfareporting_SiteSettings extends Google_Model
   protected $lookbackConfigurationDataType = '';
   protected $tagSettingType = 'Google_Service_Dfareporting_TagSetting';
   protected $tagSettingDataType = '';
-  public $videoActiveViewOptOutTemplate;
-  public $vpaidAdapterChoiceTemplate;
+  public $videoActiveViewOptOut;
 
   public function setActiveViewOptOut($activeViewOptOut)
   {
@@ -77,20 +76,12 @@ class Google_Service_Dfareporting_SiteSettings extends Google_Model
   {
     return $this->tagSetting;
   }
-  public function setVideoActiveViewOptOutTemplate($videoActiveViewOptOutTemplate)
+  public function setVideoActiveViewOptOut($videoActiveViewOptOut)
   {
-    $this->videoActiveViewOptOutTemplate = $videoActiveViewOptOutTemplate;
+    $this->videoActiveViewOptOut = $videoActiveViewOptOut;
   }
-  public function getVideoActiveViewOptOutTemplate()
+  public function getVideoActiveViewOptOut()
   {
-    return $this->videoActiveViewOptOutTemplate;
-  }
-  public function setVpaidAdapterChoiceTemplate($vpaidAdapterChoiceTemplate)
-  {
-    $this->vpaidAdapterChoiceTemplate = $vpaidAdapterChoiceTemplate;
-  }
-  public function getVpaidAdapterChoiceTemplate()
-  {
-    return $this->vpaidAdapterChoiceTemplate;
+    return $this->videoActiveViewOptOut;
   }
 }

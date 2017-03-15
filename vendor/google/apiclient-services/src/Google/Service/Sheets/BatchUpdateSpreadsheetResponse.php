@@ -21,8 +21,6 @@ class Google_Service_Sheets_BatchUpdateSpreadsheetResponse extends Google_Collec
   protected $repliesType = 'Google_Service_Sheets_Response';
   protected $repliesDataType = 'array';
   public $spreadsheetId;
-  protected $updatedSpreadsheetType = 'Google_Service_Sheets_Spreadsheet';
-  protected $updatedSpreadsheetDataType = '';
 
   public function setReplies($replies)
   {
@@ -39,13 +37,5 @@ class Google_Service_Sheets_BatchUpdateSpreadsheetResponse extends Google_Collec
   public function getSpreadsheetId()
   {
     return $this->spreadsheetId;
-  }
-  public function setUpdatedSpreadsheet(Google_Service_Sheets_Spreadsheet $updatedSpreadsheet)
-  {
-    $this->updatedSpreadsheet = $updatedSpreadsheet;
-  }
-  public function getUpdatedSpreadsheet()
-  {
-    return $this->updatedSpreadsheet;
   }
 }

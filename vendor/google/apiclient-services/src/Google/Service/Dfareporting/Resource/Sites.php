@@ -54,8 +54,7 @@ class Google_Service_Dfareporting_Resource_Sites extends Google_Service_Resource
     return $this->call('insert', array($params), "Google_Service_Dfareporting_Site");
   }
   /**
-   * Retrieves a list of sites, possibly filtered. This method supports paging.
-   * (sites.listSites)
+   * Retrieves a list of sites, possibly filtered. (sites.listSites)
    *
    * @param string $profileId User profile ID associated with this request.
    * @param array $optParams Optional parameters.

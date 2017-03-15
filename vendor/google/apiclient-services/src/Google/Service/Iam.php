@@ -38,7 +38,6 @@ class Google_Service_Iam extends Google_Service
 
   public $projects_serviceAccounts;
   public $projects_serviceAccounts_keys;
-  public $roles;
   
   /**
    * Constructs the internal representation of the Iam service.
@@ -196,10 +195,6 @@ class Google_Service_Iam extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'publicKeyType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'list' => array(
               'path' => 'v1/{+name}/keys',
@@ -216,20 +211,6 @@ class Google_Service_Iam extends Google_Service
                   'repeated' => true,
                 ),
               ),
-            ),
-          )
-        )
-    );
-    $this->roles = new Google_Service_Iam_Resource_Roles(
-        $this,
-        $this->serviceName,
-        'roles',
-        array(
-          'methods' => array(
-            'queryGrantableRoles' => array(
-              'path' => 'v1/roles:queryGrantableRoles',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
             ),
           )
         )

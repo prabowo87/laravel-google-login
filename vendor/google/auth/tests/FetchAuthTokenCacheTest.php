@@ -70,7 +70,7 @@ class FetchAuthTokenCacheTest extends BaseTest
 
     public function testGetsCachedAuthTokenUsingCachePrefix()
     {
-        $prefix = 'test_prefix_';
+        $prefix = 'test_prefix-';
         $cacheKey = 'myKey';
         $cachedValue = '2/abcdef1234567890';
         $this->mockCacheItem
@@ -102,7 +102,7 @@ class FetchAuthTokenCacheTest extends BaseTest
 
     public function testShouldSaveValueInCacheWithCacheOptions()
     {
-        $prefix = 'test_prefix_';
+        $prefix = 'test_prefix-';
         $lifetime = '70707';
         $cacheKey = 'myKey';
         $token = '1/abcdef1234567890';

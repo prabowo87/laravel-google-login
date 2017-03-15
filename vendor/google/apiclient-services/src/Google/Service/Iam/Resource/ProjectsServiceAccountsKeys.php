@@ -26,13 +26,12 @@
 class Google_Service_Iam_Resource_ProjectsServiceAccountsKeys extends Google_Service_Resource
 {
   /**
-   * Creates a ServiceAccountKey and returns it. (keys.create)
+   * Creates a service account key and returns it. (keys.create)
    *
-   * @param string $name The resource name of the service account in the following
-   * format: `projects/{project}/serviceAccounts/{account}`. Using `-` as a
-   * wildcard for the project will infer the project from the account. The
-   * `account` value can be the `email` address or the `unique_id` of the service
-   * account.
+   * @param string $name The resource name of the service account in the format
+   * "projects/{project}/serviceAccounts/{account}". Using '-' as a wildcard for
+   * the project, will infer the project from the account. The account value can
+   * be the email address or the unique_id of the service account.
    * @param Google_Service_Iam_CreateServiceAccountKeyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_ServiceAccountKey
@@ -44,13 +43,13 @@ class Google_Service_Iam_Resource_ProjectsServiceAccountsKeys extends Google_Ser
     return $this->call('create', array($params), "Google_Service_Iam_ServiceAccountKey");
   }
   /**
-   * Deletes a ServiceAccountKey. (keys.delete)
+   * Deletes a service account key. (keys.delete)
    *
    * @param string $name The resource name of the service account key in the
-   * following format: `projects/{project}/serviceAccounts/{account}/keys/{key}`.
-   * Using `-` as a wildcard for the project will infer the project from the
-   * account. The `account` value can be the `email` address or the `unique_id` of
-   * the service account.
+   * format "projects/{project}/serviceAccounts/{account}/keys/{key}". Using '-'
+   * as a wildcard for the project will infer the project from the account. The
+   * account value can be the email address or the unique_id of the service
+   * account.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_IamEmpty
    */
@@ -64,14 +63,11 @@ class Google_Service_Iam_Resource_ProjectsServiceAccountsKeys extends Google_Ser
    * Gets the ServiceAccountKey by key id. (keys.get)
    *
    * @param string $name The resource name of the service account key in the
-   * following format: `projects/{project}/serviceAccounts/{account}/keys/{key}`.
-   * Using `-` as a wildcard for the project will infer the project from the
-   * account. The `account` value can be the `email` address or the `unique_id` of
-   * the service account.
+   * format "projects/{project}/serviceAccounts/{account}/keys/{key}". Using '-'
+   * as a wildcard for the project will infer the project from the account. The
+   * account value can be the email address or the unique_id of the service
+   * account.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string publicKeyType The output format of the public key
-   * requested. X509_PEM is the default output format.
    * @return Google_Service_Iam_ServiceAccountKey
    */
   public function get($name, $optParams = array())
@@ -81,18 +77,17 @@ class Google_Service_Iam_Resource_ProjectsServiceAccountsKeys extends Google_Ser
     return $this->call('get', array($params), "Google_Service_Iam_ServiceAccountKey");
   }
   /**
-   * Lists ServiceAccountKeys. (keys.listProjectsServiceAccountsKeys)
+   * Lists service account keys (keys.listProjectsServiceAccountsKeys)
    *
-   * @param string $name The resource name of the service account in the following
-   * format: `projects/{project}/serviceAccounts/{account}`. Using `-` as a
-   * wildcard for the project, will infer the project from the account. The
-   * `account` value can be the `email` address or the `unique_id` of the service
-   * account.
+   * @param string $name The resource name of the service account in the format
+   * "projects/{project}/serviceAccounts/{account}". Using '-' as a wildcard for
+   * the project, will infer the project from the account. The account value can
+   * be the email address or the unique_id of the service account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string keyTypes Filters the types of keys the user wants to
-   * include in the list response. Duplicate key types are not allowed. If no key
-   * type is provided, all keys are returned.
+   * @opt_param string keyTypes The type of keys the user wants to list. If empty,
+   * all key types are included in the response. Duplicate key types are not
+   * allowed.
    * @return Google_Service_Iam_ListServiceAccountKeysResponse
    */
   public function listProjectsServiceAccountsKeys($name, $optParams = array())

@@ -34,6 +34,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $generation;
   public $id;
   public $kind;
+  public $kmsKeyName;
   public $md5Hash;
   public $mediaLink;
   public $metadata;
@@ -46,7 +47,6 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $storageClass;
   public $timeCreated;
   public $timeDeleted;
-  public $timeStorageClassUpdated;
   public $updated;
 
   public function setAcl($acl)
@@ -161,6 +161,14 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   {
     return $this->kind;
   }
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
+  }
   public function setMd5Hash($md5Hash)
   {
     $this->md5Hash = $md5Hash;
@@ -248,14 +256,6 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public function getTimeDeleted()
   {
     return $this->timeDeleted;
-  }
-  public function setTimeStorageClassUpdated($timeStorageClassUpdated)
-  {
-    $this->timeStorageClassUpdated = $timeStorageClassUpdated;
-  }
-  public function getTimeStorageClassUpdated()
-  {
-    return $this->timeStorageClassUpdated;
   }
   public function setUpdated($updated)
   {

@@ -20,7 +20,6 @@ class Google_Service_CloudBuild_BuildStep extends Google_Collection
   protected $collection_key = 'waitFor';
   public $args;
   public $dir;
-  public $entrypoint;
   public $env;
   public $id;
   public $name;
@@ -41,14 +40,6 @@ class Google_Service_CloudBuild_BuildStep extends Google_Collection
   public function getDir()
   {
     return $this->dir;
-  }
-  public function setEntrypoint($entrypoint)
-  {
-    $this->entrypoint = $entrypoint;
-  }
-  public function getEntrypoint()
-  {
-    return $this->entrypoint;
   }
   public function setEnv($env)
   {

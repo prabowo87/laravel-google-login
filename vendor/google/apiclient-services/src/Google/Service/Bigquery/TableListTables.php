@@ -20,7 +20,6 @@ class Google_Service_Bigquery_TableListTables extends Google_Model
   public $friendlyName;
   public $id;
   public $kind;
-  public $labels;
   protected $tableReferenceType = 'Google_Service_Bigquery_TableReference';
   protected $tableReferenceDataType = '';
   public $type;
@@ -48,14 +47,6 @@ class Google_Service_Bigquery_TableListTables extends Google_Model
   public function getKind()
   {
     return $this->kind;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
   }
   public function setTableReference(Google_Service_Bigquery_TableReference $tableReference)
   {

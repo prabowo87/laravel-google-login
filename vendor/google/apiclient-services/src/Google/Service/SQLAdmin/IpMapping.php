@@ -19,7 +19,6 @@ class Google_Service_SQLAdmin_IpMapping extends Google_Model
 {
   public $ipAddress;
   public $timeToRetire;
-  public $type;
 
   public function setIpAddress($ipAddress)
   {
@@ -36,13 +35,5 @@ class Google_Service_SQLAdmin_IpMapping extends Google_Model
   public function getTimeToRetire()
   {
     return $this->timeToRetire;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
   }
 }

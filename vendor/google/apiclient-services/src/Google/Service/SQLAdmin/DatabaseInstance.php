@@ -19,7 +19,6 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
 {
   protected $collection_key = 'suspensionReason';
   public $backendType;
-  public $connectionName;
   public $currentDiskSize;
   public $databaseVersion;
   public $etag;
@@ -56,14 +55,6 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public function getBackendType()
   {
     return $this->backendType;
-  }
-  public function setConnectionName($connectionName)
-  {
-    $this->connectionName = $connectionName;
-  }
-  public function getConnectionName()
-  {
-    return $this->connectionName;
   }
   public function setCurrentDiskSize($currentDiskSize)
   {

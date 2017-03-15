@@ -57,17 +57,7 @@ class Google_Service_CloudBuild extends Google_Service
         'operations',
         array(
           'methods' => array(
-            'cancel' => array(
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'get' => array(
+            'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(

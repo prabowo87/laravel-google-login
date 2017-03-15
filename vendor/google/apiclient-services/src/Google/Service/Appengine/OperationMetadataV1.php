@@ -15,16 +15,13 @@
  * the License.
  */
 
-class Google_Service_Appengine_OperationMetadataV1 extends Google_Collection
+class Google_Service_Appengine_OperationMetadataV1 extends Google_Model
 {
-  protected $collection_key = 'warning';
   public $endTime;
-  public $ephemeralMessage;
   public $insertTime;
   public $method;
   public $target;
   public $user;
-  public $warning;
 
   public function setEndTime($endTime)
   {
@@ -33,14 +30,6 @@ class Google_Service_Appengine_OperationMetadataV1 extends Google_Collection
   public function getEndTime()
   {
     return $this->endTime;
-  }
-  public function setEphemeralMessage($ephemeralMessage)
-  {
-    $this->ephemeralMessage = $ephemeralMessage;
-  }
-  public function getEphemeralMessage()
-  {
-    return $this->ephemeralMessage;
   }
   public function setInsertTime($insertTime)
   {
@@ -73,13 +62,5 @@ class Google_Service_Appengine_OperationMetadataV1 extends Google_Collection
   public function getUser()
   {
     return $this->user;
-  }
-  public function setWarning($warning)
-  {
-    $this->warning = $warning;
-  }
-  public function getWarning()
-  {
-    return $this->warning;
   }
 }

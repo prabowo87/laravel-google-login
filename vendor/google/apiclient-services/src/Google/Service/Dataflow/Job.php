@@ -28,7 +28,6 @@ class Google_Service_Dataflow_Job extends Google_Collection
   protected $executionInfoDataType = '';
   public $id;
   public $labels;
-  public $location;
   public $name;
   public $projectId;
   public $replaceJobId;
@@ -103,14 +102,6 @@ class Google_Service_Dataflow_Job extends Google_Collection
   public function getLabels()
   {
     return $this->labels;
-  }
-  public function setLocation($location)
-  {
-    $this->location = $location;
-  }
-  public function getLocation()
-  {
-    return $this->location;
   }
   public function setName($name)
   {

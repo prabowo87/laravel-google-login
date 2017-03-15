@@ -26,11 +26,10 @@
 class Google_Service_Speech_Resource_Speech extends Google_Service_Resource
 {
   /**
-   * Performs asynchronous speech recognition: receive results via the
-   * [google.longrunning.Operations]
-   * (/speech/reference/rest/v1beta1/operations#Operation) interface. Returns
-   * either an `Operation.error` or an `Operation.response` which contains an
-   * `AsyncRecognizeResponse` message. (speech.asyncrecognize)
+   * Perform asynchronous speech-recognition: receive results via the
+   * google.longrunning.Operations interface. Returns either an `Operation.error`
+   * or an `Operation.response` which contains an `AsyncRecognizeResponse`
+   * message. (speech.asyncrecognize)
    *
    * @param Google_Service_Speech_AsyncRecognizeRequest $postBody
    * @param array $optParams Optional parameters.
@@ -43,7 +42,7 @@ class Google_Service_Speech_Resource_Speech extends Google_Service_Resource
     return $this->call('asyncrecognize', array($params), "Google_Service_Speech_Operation");
   }
   /**
-   * Performs synchronous speech recognition: receive results after all audio has
+   * Perform synchronous speech-recognition: receive results after all audio has
    * been sent and processed. (speech.syncrecognize)
    *
    * @param Google_Service_Speech_SyncRecognizeRequest $postBody

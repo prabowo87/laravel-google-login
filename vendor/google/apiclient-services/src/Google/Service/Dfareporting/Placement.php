@@ -67,10 +67,6 @@ class Google_Service_Dfareporting_Placement extends Google_Collection
   public $tagFormats;
   protected $tagSettingType = 'Google_Service_Dfareporting_TagSetting';
   protected $tagSettingDataType = '';
-  public $videoActiveViewOptOut;
-  protected $videoSettingsType = 'Google_Service_Dfareporting_VideoSettings';
-  protected $videoSettingsDataType = '';
-  public $vpaidAdapterChoice;
 
   public function setAccountId($accountId)
   {
@@ -359,29 +355,5 @@ class Google_Service_Dfareporting_Placement extends Google_Collection
   public function getTagSetting()
   {
     return $this->tagSetting;
-  }
-  public function setVideoActiveViewOptOut($videoActiveViewOptOut)
-  {
-    $this->videoActiveViewOptOut = $videoActiveViewOptOut;
-  }
-  public function getVideoActiveViewOptOut()
-  {
-    return $this->videoActiveViewOptOut;
-  }
-  public function setVideoSettings(Google_Service_Dfareporting_VideoSettings $videoSettings)
-  {
-    $this->videoSettings = $videoSettings;
-  }
-  public function getVideoSettings()
-  {
-    return $this->videoSettings;
-  }
-  public function setVpaidAdapterChoice($vpaidAdapterChoice)
-  {
-    $this->vpaidAdapterChoice = $vpaidAdapterChoice;
-  }
-  public function getVpaidAdapterChoice()
-  {
-    return $this->vpaidAdapterChoice;
   }
 }

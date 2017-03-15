@@ -20,7 +20,6 @@ class Google_Service_ServiceControl_ReportRequest extends Google_Collection
   protected $collection_key = 'operations';
   protected $operationsType = 'Google_Service_ServiceControl_Operation';
   protected $operationsDataType = 'array';
-  public $serviceConfigId;
 
   public function setOperations($operations)
   {
@@ -29,13 +28,5 @@ class Google_Service_ServiceControl_ReportRequest extends Google_Collection
   public function getOperations()
   {
     return $this->operations;
-  }
-  public function setServiceConfigId($serviceConfigId)
-  {
-    $this->serviceConfigId = $serviceConfigId;
-  }
-  public function getServiceConfigId()
-  {
-    return $this->serviceConfigId;
   }
 }

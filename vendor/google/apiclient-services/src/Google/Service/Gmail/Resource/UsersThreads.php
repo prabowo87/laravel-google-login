@@ -75,8 +75,7 @@ class Google_Service_Gmail_Resource_UsersThreads extends Google_Service_Resource
    * in the list.
    * @opt_param string q Only return threads matching the specified query.
    * Supports the same query format as the Gmail search box. For example,
-   * "from:someuser@example.com rfc822msgid: is:unread". Parameter cannot be used
-   * when accessing the api using the gmail.metadata scope.
+   * "from:someuser@example.com rfc822msgid: is:unread".
    * @return Google_Service_Gmail_ListThreadsResponse
    */
   public function listUsersThreads($userId, $optParams = array())

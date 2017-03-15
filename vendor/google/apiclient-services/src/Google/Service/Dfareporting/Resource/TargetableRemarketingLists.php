@@ -40,8 +40,7 @@ class Google_Service_Dfareporting_Resource_TargetableRemarketingLists extends Go
     return $this->call('get', array($params), "Google_Service_Dfareporting_TargetableRemarketingList");
   }
   /**
-   * Retrieves a list of targetable remarketing lists, possibly filtered. This
-   * method supports paging.
+   * Retrieves a list of targetable remarketing lists, possibly filtered.
    * (targetableRemarketingLists.listTargetableRemarketingLists)
    *
    * @param string $profileId User profile ID associated with this request.

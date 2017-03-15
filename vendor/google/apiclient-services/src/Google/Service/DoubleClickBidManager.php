@@ -35,7 +35,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
   public $lineitems;
   public $queries;
   public $reports;
-  public $sdf;
+  public $rubicon;
   
   /**
    * Constructs the internal representation of the DoubleClickBidManager
@@ -137,14 +137,14 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->sdf = new Google_Service_DoubleClickBidManager_Resource_Sdf(
+    $this->rubicon = new Google_Service_DoubleClickBidManager_Resource_Rubicon(
         $this,
         $this->serviceName,
-        'sdf',
+        'rubicon',
         array(
           'methods' => array(
-            'download' => array(
-              'path' => 'sdf/download',
+            'notifyproposalchange' => array(
+              'path' => 'rubicon/notifyproposalchange',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),

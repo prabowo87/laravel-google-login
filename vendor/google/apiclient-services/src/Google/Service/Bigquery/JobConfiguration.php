@@ -22,7 +22,6 @@ class Google_Service_Bigquery_JobConfiguration extends Google_Model
   public $dryRun;
   protected $extractType = 'Google_Service_Bigquery_JobConfigurationExtract';
   protected $extractDataType = '';
-  public $labels;
   protected $loadType = 'Google_Service_Bigquery_JobConfigurationLoad';
   protected $loadDataType = '';
   protected $queryType = 'Google_Service_Bigquery_JobConfigurationQuery';
@@ -51,14 +50,6 @@ class Google_Service_Bigquery_JobConfiguration extends Google_Model
   public function getExtract()
   {
     return $this->extract;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
   }
   public function setLoad(Google_Service_Bigquery_JobConfigurationLoad $load)
   {

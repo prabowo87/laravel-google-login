@@ -41,8 +41,7 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_DatafeedsCustomBatchResponse");
   }
   /**
-   * Deletes a datafeed from your Merchant Center account. This method can only be
-   * called for non-multi-client accounts. (datafeeds.delete)
+   * Deletes a datafeed from your Merchant Center account. (datafeeds.delete)
    *
    * @param string $merchantId
    * @param string $datafeedId
@@ -57,8 +56,7 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('delete', array($params));
   }
   /**
-   * Retrieves a datafeed from your Merchant Center account. This method can only
-   * be called for non-multi-client accounts. (datafeeds.get)
+   * Retrieves a datafeed from your Merchant Center account. (datafeeds.get)
    *
    * @param string $merchantId
    * @param string $datafeedId
@@ -72,8 +70,7 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('get', array($params), "Google_Service_ShoppingContent_Datafeed");
   }
   /**
-   * Registers a datafeed with your Merchant Center account. This method can only
-   * be called for non-multi-client accounts. (datafeeds.insert)
+   * Registers a datafeed with your Merchant Center account. (datafeeds.insert)
    *
    * @param string $merchantId
    * @param Google_Service_ShoppingContent_Datafeed $postBody
@@ -89,8 +86,8 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('insert', array($params), "Google_Service_ShoppingContent_Datafeed");
   }
   /**
-   * Lists the datafeeds in your Merchant Center account. This method can only be
-   * called for non-multi-client accounts. (datafeeds.listDatafeeds)
+   * Lists the datafeeds in your Merchant Center account.
+   * (datafeeds.listDatafeeds)
    *
    * @param string $merchantId The ID of the managing account.
    * @param array $optParams Optional parameters.
@@ -107,9 +104,8 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('list', array($params), "Google_Service_ShoppingContent_DatafeedsListResponse");
   }
   /**
-   * Updates a datafeed of your Merchant Center account. This method can only be
-   * called for non-multi-client accounts. This method supports patch semantics.
-   * (datafeeds.patch)
+   * Updates a datafeed of your Merchant Center account. This method supports
+   * patch semantics. (datafeeds.patch)
    *
    * @param string $merchantId
    * @param string $datafeedId
@@ -126,8 +122,7 @@ class Google_Service_ShoppingContent_Resource_Datafeeds extends Google_Service_R
     return $this->call('patch', array($params), "Google_Service_ShoppingContent_Datafeed");
   }
   /**
-   * Updates a datafeed of your Merchant Center account. This method can only be
-   * called for non-multi-client accounts. (datafeeds.update)
+   * Updates a datafeed of your Merchant Center account. (datafeeds.update)
    *
    * @param string $merchantId
    * @param string $datafeedId

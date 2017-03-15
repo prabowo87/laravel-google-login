@@ -1,0 +1,1 @@
+<a href="{{route('glogin')}}">Login With Google</a>

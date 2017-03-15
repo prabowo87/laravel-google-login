@@ -39,7 +39,7 @@ use Monolog\Handler\SyslogHandler as MonologSyslogHandler;
  */
 class Google_Client
 {
-  const LIBVER = "2.1.2";
+  const LIBVER = "2.0.0-alpha";
   const USER_AGENT_SUFFIX = "google-api-php-client/";
   const OAUTH2_REVOKE_URI = 'https://accounts.google.com/o/oauth2/revoke';
   const OAUTH2_TOKEN_URI = 'https://www.googleapis.com/oauth2/v4/token';
@@ -138,10 +138,6 @@ class Google_Client
           // function to be called when an access token is fetched
           // follows the signature function ($cacheKey, $accessToken)
           'token_callback' => null,
-
-          // Service class used in Google_Client::verifyIdToken.
-          // Explicitly pass this in to avoid setting JWT::$leeway
-          'jwt' => null,
         ],
         $config
     );
@@ -232,13 +228,12 @@ class Google_Client
     $credentials = $this->createApplicationDefaultCredentials();
 
     $httpHandler = HttpHandlerFactory::build($authHttp);
-    $creds = $credentials->fetchAuthToken($httpHandler);
-    if ($creds && isset($creds['access_token'])) {
-      $creds['created'] = time();
-      $this->setAccessToken($creds);
+    $accessToken = $credentials->fetchAuthToken($httpHandler);
+    if ($accessToken && isset($accessToken['access_token'])) {
+      $this->setAccessToken($accessToken);
     }
 
-    return $creds;
+    return $accessToken;
   }
 
   /**
@@ -276,9 +271,6 @@ class Google_Client
     $creds = $auth->fetchAuthToken($httpHandler);
     if ($creds && isset($creds['access_token'])) {
       $creds['created'] = time();
-      if (!isset($creds['refresh_token'])) {
-        $creds['refresh_token'] = $refreshToken;
-      }
       $this->setAccessToken($creds);
     }
 
@@ -343,9 +335,10 @@ class Google_Client
    * set in the Google API Client object
    *
    * @param GuzzleHttp\ClientInterface $http the http client object.
+   * @param GuzzleHttp\ClientInterface $authHttp an http client for authentication.
    * @return GuzzleHttp\ClientInterface the http client object
    */
-  public function authorize(ClientInterface $http = null)
+  public function authorize(ClientInterface $http = null, ClientInterface $authHttp = null)
   {
     $credentials = null;
     $token = null;
@@ -559,8 +552,8 @@ class Google_Client
 
   /**
    * @param string $approvalPrompt Possible values for approval_prompt include:
-   *  {@code "force"} to force the approval UI to appear.
-   *  {@code "auto"} to request auto-approval when possible. (This is the default value)
+   *  {@code "force"} to force the approval UI to appear. (This is the default value)
+   *  {@code "auto"} to request auto-approval when possible.
    */
   public function setApprovalPrompt($approvalPrompt)
   {
@@ -693,8 +686,7 @@ class Google_Client
   {
     $tokenVerifier = new Google_AccessToken_Verify(
         $this->getHttpClient(),
-        $this->getCache(),
-        $this->config['jwt']
+        $this->getCache()
     );
 
     if (is_null($idToken)) {
@@ -839,7 +831,7 @@ class Google_Client
    * This structure should match the file downloaded from
    * the "Download JSON" button on in the Google Developer
    * Console.
-   * @param string|array $config the configuration json
+   * @param string|array $json the configuration json
    * @throws Google_Exception
    */
   public function setAuthConfig($config)
@@ -1011,7 +1003,14 @@ class Google_Client
 
   protected function createDefaultCache()
   {
-    return new MemoryCacheItemPool;
+    // use filesystem cache by default if tedivm/stash exists
+    if (class_exists('Stash\Pool')) {
+      $cache = new Stash\Pool(new Stash\Driver\FileSystem);
+    } else {
+      $cache = new MemoryCacheItemPool;
+    }
+
+    return $cache;
   }
 
   /**

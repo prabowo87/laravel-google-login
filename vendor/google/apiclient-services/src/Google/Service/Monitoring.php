@@ -19,9 +19,13 @@
  * Service definition for Monitoring (v3).
  *
  * <p>
- * Manages your Stackdriver Monitoring data and configurations. Most projects
- * must be associated with a Stackdriver account, with a few exceptions as noted
- * on the individual method pages.</p>
+ * Manages your Stackdriver monitoring data and configurations. Projects must be
+ * associated with a Stackdriver account, except for the following methods: [mon
+ * itoredResourceDescriptors.list](v3/projects.monitoredResourceDescriptors/list
+ * ), [monitoredResourceDescriptors.get](v3/projects.monitoredResourceDescriptor
+ * s/get), [metricDescriptors.list](v3/projects.metricDescriptors/list),
+ * [metricDescriptors.get](v3/projects.metricDescriptors/get), and
+ * [timeSeries.list](v3/projects.timeSeries/list).</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -134,14 +138,6 @@ class Google_Service_Monitoring extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'descendantsOfGroup' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'childrenOfGroup' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -149,6 +145,14 @@ class Google_Service_Monitoring extends Google_Service
                 'ancestorsOfGroup' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'descendantsOfGroup' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -188,6 +192,14 @@ class Google_Service_Monitoring extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -197,14 +209,6 @@ class Google_Service_Monitoring extends Google_Service
                   'type' => 'string',
                 ),
                 'interval.startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -258,13 +262,13 @@ class Google_Service_Monitoring extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -300,13 +304,13 @@ class Google_Service_Monitoring extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -346,28 +350,11 @@ class Google_Service_Monitoring extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'aggregation.groupByFields' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'aggregation.crossSeriesReducer' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'interval.endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'interval.startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -379,9 +366,26 @@ class Google_Service_Monitoring extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'aggregation.crossSeriesReducer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'aggregation.groupByFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
                 'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',

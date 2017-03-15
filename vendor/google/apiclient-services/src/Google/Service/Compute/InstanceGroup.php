@@ -27,7 +27,6 @@ class Google_Service_Compute_InstanceGroup extends Google_Collection
   protected $namedPortsType = 'Google_Service_Compute_NamedPort';
   protected $namedPortsDataType = 'array';
   public $network;
-  public $region;
   public $selfLink;
   public $size;
   public $subnetwork;
@@ -96,14 +95,6 @@ class Google_Service_Compute_InstanceGroup extends Google_Collection
   public function getNetwork()
   {
     return $this->network;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
   }
   public function setSelfLink($selfLink)
   {

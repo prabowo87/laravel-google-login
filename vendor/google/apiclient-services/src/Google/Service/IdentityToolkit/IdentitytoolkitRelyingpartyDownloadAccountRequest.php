@@ -20,7 +20,6 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountR
   public $delegatedProjectNumber;
   public $maxResults;
   public $nextPageToken;
-  public $targetProjectId;
 
   public function setDelegatedProjectNumber($delegatedProjectNumber)
   {
@@ -45,13 +44,5 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountR
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  public function setTargetProjectId($targetProjectId)
-  {
-    $this->targetProjectId = $targetProjectId;
-  }
-  public function getTargetProjectId()
-  {
-    return $this->targetProjectId;
   }
 }

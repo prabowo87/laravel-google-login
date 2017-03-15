@@ -106,9 +106,7 @@ class Google_Service_Storage_Resource_Buckets extends Google_Service_Resource
     return $this->call('list', array($params), "Google_Service_Storage_Buckets");
   }
   /**
-   * Updates a bucket. Changes to the bucket will be readable immediately after
-   * writing, but configuration changes may take time to propagate. This method
-   * supports patch semantics. (buckets.patch)
+   * Updates a bucket. This method supports patch semantics. (buckets.patch)
    *
    * @param string $bucket Name of a bucket.
    * @param Google_Service_Storage_Bucket $postBody
@@ -134,9 +132,7 @@ class Google_Service_Storage_Resource_Buckets extends Google_Service_Resource
     return $this->call('patch', array($params), "Google_Service_Storage_Bucket");
   }
   /**
-   * Updates a bucket. Changes to the bucket will be readable immediately after
-   * writing, but configuration changes may take time to propagate.
-   * (buckets.update)
+   * Updates a bucket. (buckets.update)
    *
    * @param string $bucket Name of a bucket.
    * @param Google_Service_Storage_Bucket $postBody

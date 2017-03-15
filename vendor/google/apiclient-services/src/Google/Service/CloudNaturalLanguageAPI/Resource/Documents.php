@@ -54,9 +54,10 @@ class Google_Service_CloudNaturalLanguageAPI_Resource_Documents extends Google_S
     return $this->call('analyzeSentiment', array($params), "Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentResponse");
   }
   /**
-   * A convenience method that provides all the features that analyzeSentiment,
-   * analyzeEntities, and analyzeSyntax provide in one call.
-   * (documents.annotateText)
+   * Advanced API that analyzes the document and provides a full set of text
+   * annotations, including semantic, syntactic, and sentiment information. This
+   * API is intended for users who are familiar with machine learning and need in-
+   * depth text features to build upon. (documents.annotateText)
    *
    * @param Google_Service_CloudNaturalLanguageAPI_AnnotateTextRequest $postBody
    * @param array $optParams Optional parameters.

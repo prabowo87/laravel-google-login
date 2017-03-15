@@ -19,9 +19,8 @@
  * Service definition for AdExchangeBuyerII (v2beta1).
  *
  * <p>
- * Accesses the latest features for managing Ad Exchange accounts, Real-Time
- * Bidding configurations and auction metrics, and Marketplace programmatic
- * deals.</p>
+ * Accesses the latest features for managing Ad Exchange accounts and Real-Time
+ * Bidding configurations and auction metrics.</p>
  *
  * <p>
  * For more information about this service, see the API

@@ -31,7 +31,6 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   public $photoUrl;
   protected $providerUserInfoType = 'Google_Service_IdentityToolkit_UserInfoProviderUserInfo';
   protected $providerUserInfoDataType = 'array';
-  public $rawPassword;
   public $salt;
   public $screenName;
   public $validSince;
@@ -132,14 +131,6 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   public function getProviderUserInfo()
   {
     return $this->providerUserInfo;
-  }
-  public function setRawPassword($rawPassword)
-  {
-    $this->rawPassword = $rawPassword;
-  }
-  public function getRawPassword()
-  {
-    return $this->rawPassword;
   }
   public function setSalt($salt)
   {

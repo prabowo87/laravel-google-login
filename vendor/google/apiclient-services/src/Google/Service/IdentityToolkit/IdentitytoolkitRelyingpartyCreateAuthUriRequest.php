@@ -15,14 +15,16 @@
  * the License.
  */
 
-class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest extends Google_Model
+class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest extends Google_Collection
 {
+  protected $collection_key = 'customParameter';
   public $appId;
   public $authFlowType;
   public $clientId;
   public $context;
   public $continueUri;
-  public $customParameter;
+  protected $customParameterType = 'Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequestCustomParameter';
+  protected $customParameterDataType = 'array';
   public $hostedDomain;
   public $identifier;
   public $oauthConsumerKey;

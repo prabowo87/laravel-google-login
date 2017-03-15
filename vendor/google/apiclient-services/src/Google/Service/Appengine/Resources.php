@@ -15,14 +15,11 @@
  * the License.
  */
 
-class Google_Service_Appengine_Resources extends Google_Collection
+class Google_Service_Appengine_Resources extends Google_Model
 {
-  protected $collection_key = 'volumes';
   public $cpu;
   public $diskGb;
   public $memoryGb;
-  protected $volumesType = 'Google_Service_Appengine_Volume';
-  protected $volumesDataType = 'array';
 
   public function setCpu($cpu)
   {
@@ -47,13 +44,5 @@ class Google_Service_Appengine_Resources extends Google_Collection
   public function getMemoryGb()
   {
     return $this->memoryGb;
-  }
-  public function setVolumes($volumes)
-  {
-    $this->volumes = $volumes;
-  }
-  public function getVolumes()
-  {
-    return $this->volumes;
   }
 }

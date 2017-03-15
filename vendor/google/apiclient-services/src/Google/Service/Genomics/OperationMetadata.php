@@ -23,7 +23,6 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   public $endTime;
   protected $eventsType = 'Google_Service_Genomics_OperationEvent';
   protected $eventsDataType = 'array';
-  public $labels;
   public $projectId;
   public $request;
   public $runtimeMetadata;
@@ -60,14 +59,6 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   public function getEvents()
   {
     return $this->events;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
   }
   public function setProjectId($projectId)
   {

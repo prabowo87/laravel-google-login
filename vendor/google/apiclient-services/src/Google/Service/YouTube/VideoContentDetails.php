@@ -25,7 +25,6 @@ class Google_Service_YouTube_VideoContentDetails extends Google_Model
   public $definition;
   public $dimension;
   public $duration;
-  public $hasCustomThumbnail;
   public $licensedContent;
   public $projection;
   protected $regionRestrictionType = 'Google_Service_YouTube_VideoContentDetailsRegionRestriction';
@@ -78,14 +77,6 @@ class Google_Service_YouTube_VideoContentDetails extends Google_Model
   public function getDuration()
   {
     return $this->duration;
-  }
-  public function setHasCustomThumbnail($hasCustomThumbnail)
-  {
-    $this->hasCustomThumbnail = $hasCustomThumbnail;
-  }
-  public function getHasCustomThumbnail()
-  {
-    return $this->hasCustomThumbnail;
   }
   public function setLicensedContent($licensedContent)
   {

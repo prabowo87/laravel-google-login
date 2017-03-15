@@ -34,7 +34,6 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public $isActive;
   public $kind;
   public $languages;
-  public $minimumViewabilityDecile;
   public $mobileCarriers;
   public $mobileDevices;
   public $mobileOperatingSystemVersions;
@@ -42,7 +41,6 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   protected $placementsDataType = 'array';
   public $platforms;
   public $supportedCreativeAttributes;
-  public $userIdentifierDataRequired;
   public $userLists;
   public $vendorTypes;
   public $verticals;
@@ -161,14 +159,6 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->languages;
   }
-  public function setMinimumViewabilityDecile($minimumViewabilityDecile)
-  {
-    $this->minimumViewabilityDecile = $minimumViewabilityDecile;
-  }
-  public function getMinimumViewabilityDecile()
-  {
-    return $this->minimumViewabilityDecile;
-  }
   public function setMobileCarriers($mobileCarriers)
   {
     $this->mobileCarriers = $mobileCarriers;
@@ -216,14 +206,6 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public function getSupportedCreativeAttributes()
   {
     return $this->supportedCreativeAttributes;
-  }
-  public function setUserIdentifierDataRequired($userIdentifierDataRequired)
-  {
-    $this->userIdentifierDataRequired = $userIdentifierDataRequired;
-  }
-  public function getUserIdentifierDataRequired()
-  {
-    return $this->userIdentifierDataRequired;
   }
   public function setUserLists($userLists)
   {

@@ -143,15 +143,16 @@ class ApplicationDefaultCredentials
         $creds = null;
         $jsonKey = CredentialsLoader::fromEnv()
             ?: CredentialsLoader::fromWellKnownFile();
-
         if (!is_null($jsonKey)) {
             $creds = CredentialsLoader::makeCredentials($scope, $jsonKey);
-        } elseif (AppIdentityCredentials::onAppEngine() && !GCECredentials::onAppEngineFlexible()) {
+        }
+        if (AppIdentityCredentials::onAppEngine() &&
+            !GCECredentials::onAppEngineFlexible()) {
             $creds = new AppIdentityCredentials($scope);
-        } elseif (GCECredentials::onGce($httpHandler)) {
+        }
+        if (GCECredentials::onGce($httpHandler)) {
             $creds = new GCECredentials();
         }
-
         if (is_null($creds)) {
             throw new \DomainException(self::notFound());
         }

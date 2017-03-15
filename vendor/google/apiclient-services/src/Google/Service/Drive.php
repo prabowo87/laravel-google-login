@@ -709,14 +709,6 @@ class Google_Service_Drive extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'update' => array(
               'path' => 'files/{fileId}/revisions/{revisionId}',

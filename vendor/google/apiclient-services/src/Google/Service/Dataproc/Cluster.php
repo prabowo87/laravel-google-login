@@ -22,9 +22,6 @@ class Google_Service_Dataproc_Cluster extends Google_Collection
   public $clusterUuid;
   protected $configType = 'Google_Service_Dataproc_ClusterConfig';
   protected $configDataType = '';
-  public $labels;
-  protected $metricsType = 'Google_Service_Dataproc_ClusterMetrics';
-  protected $metricsDataType = '';
   public $projectId;
   protected $statusType = 'Google_Service_Dataproc_ClusterStatus';
   protected $statusDataType = '';
@@ -54,22 +51,6 @@ class Google_Service_Dataproc_Cluster extends Google_Collection
   public function getConfig()
   {
     return $this->config;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
-  }
-  public function setMetrics(Google_Service_Dataproc_ClusterMetrics $metrics)
-  {
-    $this->metrics = $metrics;
-  }
-  public function getMetrics()
-  {
-    return $this->metrics;
   }
   public function setProjectId($projectId)
   {

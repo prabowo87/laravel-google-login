@@ -21,7 +21,6 @@ class Google_Service_YouTube_PlaylistItemContentDetails extends Google_Model
   public $note;
   public $startAt;
   public $videoId;
-  public $videoPublishedAt;
 
   public function setEndAt($endAt)
   {
@@ -54,13 +53,5 @@ class Google_Service_YouTube_PlaylistItemContentDetails extends Google_Model
   public function getVideoId()
   {
     return $this->videoId;
-  }
-  public function setVideoPublishedAt($videoPublishedAt)
-  {
-    $this->videoPublishedAt = $videoPublishedAt;
-  }
-  public function getVideoPublishedAt()
-  {
-    return $this->videoPublishedAt;
   }
 }

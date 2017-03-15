@@ -177,10 +177,6 @@ class Google_Service_ServiceManagement extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'consumerId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'setIamPolicy' => array(
               'path' => 'v1/{+resource}:setIamPolicy',

@@ -27,6 +27,8 @@ class Google_Service_YouTube_VideoFileDetails extends Google_Collection
   public $fileName;
   public $fileSize;
   public $fileType;
+  protected $recordingLocationType = 'Google_Service_YouTube_GeoPoint';
+  protected $recordingLocationDataType = '';
   protected $videoStreamsType = 'Google_Service_YouTube_VideoFileDetailsVideoStream';
   protected $videoStreamsDataType = 'array';
 
@@ -93,6 +95,14 @@ class Google_Service_YouTube_VideoFileDetails extends Google_Collection
   public function getFileType()
   {
     return $this->fileType;
+  }
+  public function setRecordingLocation(Google_Service_YouTube_GeoPoint $recordingLocation)
+  {
+    $this->recordingLocation = $recordingLocation;
+  }
+  public function getRecordingLocation()
+  {
+    return $this->recordingLocation;
   }
   public function setVideoStreams($videoStreams)
   {

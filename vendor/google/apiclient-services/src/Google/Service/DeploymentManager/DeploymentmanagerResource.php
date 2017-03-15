@@ -18,8 +18,6 @@
 class Google_Service_DeploymentManager_DeploymentmanagerResource extends Google_Collection
 {
   protected $collection_key = 'warnings';
-  protected $accessControlType = 'Google_Service_DeploymentManager_ResourceAccessControl';
-  protected $accessControlDataType = '';
   public $finalProperties;
   public $id;
   public $insertTime;
@@ -34,14 +32,6 @@ class Google_Service_DeploymentManager_DeploymentmanagerResource extends Google_
   protected $warningsType = 'Google_Service_DeploymentManager_DeploymentmanagerResourceWarnings';
   protected $warningsDataType = 'array';
 
-  public function setAccessControl(Google_Service_DeploymentManager_ResourceAccessControl $accessControl)
-  {
-    $this->accessControl = $accessControl;
-  }
-  public function getAccessControl()
-  {
-    return $this->accessControl;
-  }
   public function setFinalProperties($finalProperties)
   {
     $this->finalProperties = $finalProperties;

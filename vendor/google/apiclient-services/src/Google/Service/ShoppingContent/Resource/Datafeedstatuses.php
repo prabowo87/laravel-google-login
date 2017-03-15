@@ -39,8 +39,7 @@ class Google_Service_ShoppingContent_Resource_Datafeedstatuses extends Google_Se
     return $this->call('custombatch', array($params), "Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse");
   }
   /**
-   * Retrieves the status of a datafeed from your Merchant Center account. This
-   * method can only be called for non-multi-client accounts.
+   * Retrieves the status of a datafeed from your Merchant Center account.
    * (datafeedstatuses.get)
    *
    * @param string $merchantId
@@ -55,8 +54,7 @@ class Google_Service_ShoppingContent_Resource_Datafeedstatuses extends Google_Se
     return $this->call('get', array($params), "Google_Service_ShoppingContent_DatafeedStatus");
   }
   /**
-   * Lists the statuses of the datafeeds in your Merchant Center account. This
-   * method can only be called for non-multi-client accounts.
+   * Lists the statuses of the datafeeds in your Merchant Center account.
    * (datafeedstatuses.listDatafeedstatuses)
    *
    * @param string $merchantId The ID of the managing account.

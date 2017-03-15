@@ -136,11 +136,6 @@ class Google_Service_Classroom extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'courseStates' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',

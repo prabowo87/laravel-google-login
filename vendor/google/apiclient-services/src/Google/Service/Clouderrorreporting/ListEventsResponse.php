@@ -21,7 +21,6 @@ class Google_Service_Clouderrorreporting_ListEventsResponse extends Google_Colle
   protected $errorEventsType = 'Google_Service_Clouderrorreporting_ErrorEvent';
   protected $errorEventsDataType = 'array';
   public $nextPageToken;
-  public $timeRangeBegin;
 
   public function setErrorEvents($errorEvents)
   {
@@ -38,13 +37,5 @@ class Google_Service_Clouderrorreporting_ListEventsResponse extends Google_Colle
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  public function setTimeRangeBegin($timeRangeBegin)
-  {
-    $this->timeRangeBegin = $timeRangeBegin;
-  }
-  public function getTimeRangeBegin()
-  {
-    return $this->timeRangeBegin;
   }
 }

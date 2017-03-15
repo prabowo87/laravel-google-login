@@ -372,16 +372,6 @@ class Google_Service_AndroidEnterprise extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'createWebToken' => array(
-              'path' => 'enterprises/{enterpriseId}/createWebToken',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'enterpriseId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'delete' => array(
               'path' => 'enterprises/{enterpriseId}',
               'httpMethod' => 'DELETE',

@@ -30,15 +30,9 @@
  */
 class Google_Service_Appengine extends Google_Service
 {
-  /** View and manage your applications deployed on Google App Engine. */
-  const APPENGINE_ADMIN =
-      "https://www.googleapis.com/auth/appengine.admin";
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM_READ_ONLY =
-      "https://www.googleapis.com/auth/cloud-platform.read-only";
 
   public $apps;
   public $apps_locations;
@@ -66,11 +60,7 @@ class Google_Service_Appengine extends Google_Service
         'apps',
         array(
           'methods' => array(
-            'create' => array(
-              'path' => 'v1/apps',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'get' => array(
+            'get' => array(
               'path' => 'v1/apps/{appsId}',
               'httpMethod' => 'GET',
               'parameters' => array(
@@ -78,20 +68,6 @@ class Google_Service_Appengine extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),'patch' => array(
-              'path' => 'v1/apps/{appsId}',
-              'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'appsId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'updateMask' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'repair' => array(
