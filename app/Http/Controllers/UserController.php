@@ -9,33 +9,33 @@ class UserController extends Controller
 {
     public function googlelogin(Request $req)
     {
-        $gClient = new \Google_Client();
-        $gClient->setApplicationName('laravel-login');
-        $gClient->setClientId('673882844731-9cunr377elhqa2ea2vbsggr74ttq0le4.apps.googleusercontent.com');
-        $gClient->setClientSecret('YRzemKIyQujT1kxHKSPyCdGd');
-        $gClient->setRedirectUri(route('glogin'));
-        $gClient->setDeveloperKey('AIzaSyDy4laC627pcIJbspvPa-LtDbIKta5qj74');
-        $gClient->setScopes(array(
+        $klien = new \Google_Client();
+        $klien->setApplicationName('laravel-login');
+        $klien->setClientId('673882844731-9cunr377elhqa2ea2vbsggr74ttq0le4.apps.googleusercontent.com');
+        $klien->setClientSecret('YRzemKIyQujT1kxHKSPyCdGd');
+        $klien->setRedirectUri(route('glogin'));
+        $klien->setDeveloperKey('AIzaSyDy4laC627pcIJbspvPa-LtDbIKta5qj74');
+        $klien->setScopes(array(
             'https://www.googleapis.com/auth/plus.me',
             'https://www.googleapis.com/auth/userinfo.email',
             'https://www.googleapis.com/auth/userinfo.profile',
         ));
-        $google_oauthV2 = new \Google_Service_Oauth2($gClient);
+        $googleOauthv2 = new \Google_Service_Oauth2($klien);
         if ($req->get('code')){
-            $gClient->authenticate($req->get('code'));
-            $req->session()->put('token', $gClient->getAccessToken());
+            $klien->authenticate($req->get('code'));
+            $req->session()->put('token', $klien->getAccessToken());
         }
         if ($req->session()->get('token'))
         {
-            $gClient->setAccessToken($req->session()->get('token'));
+            $klien->setAccessToken($req->session()->get('token'));
         }
-        if ($gClient->getAccessToken())
+        if ($klien->getAccessToken())
         {
-            //For logged in user, get details from google using access token
-            $guser = $google_oauthV2->userinfo->get();  
+            //get details from google using access token
+            $userInfo = $googleOauthv2->userinfo->get();  
 
-            $req->session()->put('name', $guser['name']);
-            if ($user = User::where('email',$guser['email'])->first())
+            $req->session()->put('name', $userInfo['name']);
+            if ($user = User::where('email',$userInfo['email'])->first())
             {
                 //logged your user via auth login
                 return redirect()->route('welcome');
@@ -47,12 +47,8 @@ class UserController extends Controller
         else
         {
             //For Guest user, get google login url
-            $authUrl = $gClient->createAuthUrl();
+            $authUrl = $klien->createAuthUrl();
             return redirect()->to($authUrl);
         }
     }
-//    public function listGoogleUser(Request $request){
-//        $users = User::orderBy('id','DESC')->paginate(5);
-//        return view('users.list',compact('users'))->with('i', ($request->input('page', 1) - 1) * 5);
-//    }
 }
