@@ -11,17 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+//when user already registered to website
+Route::get('/', function(){
+    return view('index');
+})->name('index');
+
+//login page
+Route::get('/login', function(){
     return view('login');
-});
-Route::get('welcome', function(){
-    return view('welcome');
-});
-Route::get('glogin',array(
-    'as'    =>'glogin',
-    'uses'  =>'UserController@googlelogin'
-));
-//Route::get('google-user',array(
-//    'as'    =>'user.glist',
-//    'uses'  =>'UserController@listGoogleUser'
-//));
+})->name('login');
+
+//login process with google
+Route::get('/googlelogin','UserController@loginWithGoogle')->name('googlelogin');
+
+//logout page, also delete session
+Route::get('logout', function(){
+    return view('logout');
+})->name('logout');

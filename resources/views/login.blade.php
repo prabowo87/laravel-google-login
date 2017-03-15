@@ -1,2 +1,2 @@
 <title>{{config('app.name')}}</title>
-<a href="{{route('glogin')}}">Login With Google</a>
+<a href="{{route('googlelogin')}}">Login With Google</a>

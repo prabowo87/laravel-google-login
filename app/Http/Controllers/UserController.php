@@ -7,14 +7,19 @@ use App\Http\Controllers\Controller;
 use App\User;
 class UserController extends Controller
 {
-    public function googlelogin(Request $req)
+    public function loginWithGoogle(Request $req)
     {
         $klien = new \Google_Client();
+        //apllication name
         $klien->setApplicationName('laravel-login');
-        $klien->setClientId('673882844731-9cunr377elhqa2ea2vbsggr74ttq0le4.apps.googleusercontent.com');
-        $klien->setClientSecret('YRzemKIyQujT1kxHKSPyCdGd');
-        $klien->setRedirectUri(route('glogin'));
-        $klien->setDeveloperKey('AIzaSyDy4laC627pcIJbspvPa-LtDbIKta5qj74');
+        //client id
+        $klien->setClientId('CLIENT_ID');
+        //client secret
+        $klien->setClientSecret('CLIENT_SECRET');
+        //redirect url, setting mush be match with credential
+        $klien->setRedirectUri(route('googlelogin'));
+        //developer key
+        $klien->setDeveloperKey('DEVELOPER_KEY');
         $klien->setScopes(array(
             'https://www.googleapis.com/auth/plus.me',
             'https://www.googleapis.com/auth/userinfo.email',
@@ -38,11 +43,17 @@ class UserController extends Controller
             if ($user = User::where('email',$userInfo['email'])->first())
             {
                 //logged your user via auth login
-                return redirect()->route('welcome');
+                //do something when user with these email already registered in website
             }else{
                 //register your user with response data
             }
-            return redirect()->route('welcome');     
+            
+            //create session
+            session([
+                //store session google user value, your name
+                'googleuser'    => $userInfo['name']
+            ]);
+            return redirect()->route('index');
         }
         else
         {
