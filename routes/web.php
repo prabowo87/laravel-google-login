@@ -21,7 +21,7 @@ Route::get('/login', function(){
     return view('login');
 })->name('login');
 
-//login process with google
+//login process with google, 'googlelogin' => 'URI_REDIRECT'
 Route::get('/googlelogin','UserController@loginWithGoogle')->name('googlelogin');
 
 //logout page, also delete session
