@@ -5,7 +5,7 @@ This repo already installed required dependencies:
 2. [Guzzle](https://github.com/guzzle/guzzle)  
 --------------------------------------------------
 Make sure you've configured ```CLIENT_ID```, ```CLIENT_SECRET```, ```API_KEY/DEVELOPER_KEY```,
-and ```URI_REDIRECT```  
+and ```URI_REDIRECT```. Location : ```UserController.php``` and ```web.php```.
 These configuration can be found at Google Console API
 1. for ```API_KEY/DEVELOPER_KEY```  
 ![DEVELOPER_KEY](https://raw.githubusercontent.com/dhanyn10/laravel-google-login/master/api-key.png)  
